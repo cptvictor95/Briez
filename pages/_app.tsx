@@ -18,7 +18,8 @@ const theme = extendTheme({ colors, styles: {
   global: {
     'html, body': {
       boxSizing: 'border-box',
-      width: '100vw'
+      width: '100vw',
+      backgroundColor: 'light.bg'
     }
   }
 } });
@@ -28,9 +29,9 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <FirebaseProvider>
-        <ChakraProvider theme={theme}>
-        <Component {...pageProps} />
-      </ChakraProvider>
+          <ChakraProvider theme={theme}>
+            <Component {...pageProps} />
+        </ChakraProvider>
       </FirebaseProvider>
     );
   }
