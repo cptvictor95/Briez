@@ -2,7 +2,8 @@ import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
 import React from 'react';
 
-import { AppProps } from 'next/app'
+import App from 'next/app'
+import { FirebaseProvider } from '../config/context';
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
@@ -22,12 +23,17 @@ const theme = extendTheme({ colors, styles: {
   }
 } });
 
-const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
-  return (
-    <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
-    </ChakraProvider>
-  );
+class MyApp extends App {
+  render(): JSX.Element {
+    const { Component, pageProps } = this.props;
+    return (
+      <FirebaseProvider>
+        <ChakraProvider theme={theme}>
+        <Component {...pageProps} />
+      </ChakraProvider>
+      </FirebaseProvider>
+    );
+  }
 };
 
 export default MyApp;

@@ -8,7 +8,7 @@ const Home: React.FC = () => {
       <Head>
         <title>Home</title>
       </Head>
-      <Flex flexDir="column" alignItems="center" justify="center">
+      <Flex h="100%" align="center" justify="center">
         <Heading color="light.text">Hello World!</Heading>
       </Flex>
     </Container>
