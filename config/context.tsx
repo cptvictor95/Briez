@@ -18,6 +18,7 @@ try {
     firebase.initializeApp({
       apiKey: "AIzaSyCj2yXVRhl0dRYdCkU-VLBKGhFiJFqFc7Y",
       authDomain: "briez-app.firebaseapp.com",
+      databaseURL: "https://briez-app.firebaseio.com",
       projectId: "briez-app",
       storageBucket: "briez-app.appspot.com",
       messagingSenderId: "262044054752",
