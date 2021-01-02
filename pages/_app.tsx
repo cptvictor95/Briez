@@ -13,7 +13,14 @@ const colors = {
     warn: '#E29578'
   },
 };
-const theme = extendTheme({ colors });
+const theme = extendTheme({ colors, styles: {
+  global: {
+    'html, body': {
+      boxSizing: 'border-box',
+      width: '100vw'
+    }
+  }
+} });
 
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   return (

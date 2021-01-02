@@ -4,7 +4,7 @@ import React from 'react';
 
 const Home: React.FC = () => {
   return (
-    <Container height="100vh">
+    <Container height="100vh" p={0} maxW="100%" bg="light.bg">
       <Head>
         <title>Home</title>
       </Head>
