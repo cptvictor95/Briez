@@ -6,10 +6,11 @@ import { AppProps } from 'next/app'
 
 // 2. Extend the theme to include custom colors, fonts, etc
 const colors = {
-  brand: {
-    900: '#1a365d',
-    800: '#153e75',
-    700: '#2a69ac',
+  light: {
+    bg: '#EDF6F9',
+    text: '#006D77',
+    accent: '#83C5BE',
+    warn: '#E29578'
   },
 };
 const theme = extendTheme({ colors });
