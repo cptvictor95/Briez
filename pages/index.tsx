@@ -9,7 +9,7 @@ const Home: React.FC = () => {
         <title>Home</title>
       </Head>
       <Flex h="100%" align="center" justify="center">
-        <Heading color="light.text">Hello World!</Heading>
+        <Heading fontSize="78px" color="light.text">BRAV</Heading>
       </Flex>
     </Container>
   );
