@@ -1,6 +1,6 @@
 # Welcome to BRAV
 
-This is BRAV an app for exercise cataloging, workout creation and progress tracking.
+This is BRAV, an app for exercise cataloging, workout creation and progress tracking.
 
 This app is made with NextJS, Firebase and Typescript.
 
