@@ -1,19 +1,20 @@
-import { Flex, Heading } from '@chakra-ui/react';
-import Head from 'next/head';
-import React from 'react';
-import Main from '../components/Main'
+import { Center, Heading } from '@chakra-ui/react'
+import Head from 'next/head'
+import React from 'react'
 
 const Home: React.FC = () => {
   return (
-    <Main>
+    <>
       <Head>
-        <title>Home</title>
+        <title>Create Next App</title>
+        <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Flex h="100%" align="center" justify="center">
-        <Heading fontSize="78px" color="light.text">BRAV</Heading>
-      </Flex>
-    </Main>
-  );
-};
+      <Center h="100vh" w="100%" flexDirection="column">
+        <Heading as="h1">Hello! Welcome to BRAV</Heading>
+        <Heading as="h4">List of Exercises</Heading>
+      </Center>
+    </>
+  )
+}
 
-export default Home;
+export default Home
