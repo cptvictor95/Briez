@@ -11,7 +11,14 @@ const Button: React.FC<{
     return router.push(route)
   }
   return (
-    <ChakraButton onClick={() => goToRoute(toRoute)}>{children}</ChakraButton>
+    <ChakraButton
+      onClick={() => goToRoute(toRoute)}
+      variant="solid"
+      colorScheme="purple"
+      m={2}
+    >
+      {children}
+    </ChakraButton>
   )
 }
 

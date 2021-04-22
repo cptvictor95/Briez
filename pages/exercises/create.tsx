@@ -1,4 +1,4 @@
-import { Flex, Button, useToast } from '@chakra-ui/react'
+import { Flex, Button, useToast, Heading } from '@chakra-ui/react'
 import axios from 'axios'
 import { Router, useRouter } from 'next/dist/client/router'
 import React, { useState } from 'react'
@@ -40,7 +40,7 @@ const Create: React.FC = () => {
   }
 
   return (
-    <Main>
+    <Main title="Create Exercise">
       <Flex as="section" w="100%" h="100%" justify="center" align="center">
         <Flex
           as="form"
@@ -48,6 +48,9 @@ const Create: React.FC = () => {
           direction="column"
           justify="center"
         >
+          <Heading as="h2" fontSize="2xl" p={4}>
+            Create your exercise
+          </Heading>
           <FormInput
             label="Name"
             id="title"
@@ -84,7 +87,13 @@ const Create: React.FC = () => {
             isInvalid={errors.category}
             register={register({ required: true })}
           />
-          <Button type="submit" isLoading={formState.isSubmitting}>
+          <Button
+            type="submit"
+            isLoading={formState.isSubmitting}
+            variant="solid"
+            my={2}
+            alignSelf="flex-end"
+          >
             Salvar
           </Button>
         </Flex>

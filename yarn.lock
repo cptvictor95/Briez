@@ -735,6 +735,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource/lato@^4.2.2":
+  version "4.2.2"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.2.2.tgz#e0e592180bf7f2276190b4448aea2feaac888d1f"
+  integrity sha512-ZE5WvqZQZinXpH8MaEiM9klDsUOfCHVQJ/tZKpNVQhi8mHt9WqPCROu500oI5jC3s6jaJuWsM7LfJ1zyEeW+XA==
+
 "@hapi/accept@5.0.1":
   version "5.0.1"
   resolved "https://registry.yarnpkg.com/@hapi/accept/-/accept-5.0.1.tgz#068553e867f0f63225a506ed74e899441af53e10"

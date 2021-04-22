@@ -1,5 +1,5 @@
 import React from 'react'
-import Button from '../components/button'
+import Button from './Button'
 import { Flex } from '@chakra-ui/layout'
 
 const Header = () => {
