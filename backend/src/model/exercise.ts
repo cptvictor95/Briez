@@ -38,7 +38,7 @@ exerciseSchema.statics.build = (attr: IExercise) => {
   return new Exercise(attr)
 }
 
-// Model needs to be of type ModelInterface and return type Doc
+// // Model needs to be of type ModelInterface and return type Doc
 const Exercise = mongoose.model<ExerciseDoc, exerciseModelInterface>(
   'Exercise',
   exerciseSchema

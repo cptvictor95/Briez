@@ -6,7 +6,7 @@ const createExercise = async (
   res: Response
 ): Promise<Response> => {
   try {
-    const { title, description, musclesUsed, category } = req.body.exercise
+    const { title, description, musclesUsed, category } = req.body
 
     const exercise = Exercise.build({
       title: title,
