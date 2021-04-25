@@ -1,24 +1,9 @@
-import {
-  Box,
-  Center,
-  Flex,
-  Heading,
-  ListItem,
-  Spinner,
-  Text,
-  Wrap,
-  WrapItem,
-} from '@chakra-ui/react'
+import { Center, Heading, Wrap } from '@chakra-ui/react'
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
-
-interface Exercise {
-  _id: string
-  title: string
-  description: string
-  musclesUsed: string[]
-  category: string
-}
+import ExerciseCard from '../../components/ExerciseCard'
+import Spinner from '../../components/Spinner'
+import { Exercise } from '../../interface/Exercise'
 
 const Exercises: React.FC = () => {
   const [exercises, setExercises] = useState<Exercise[]>([])
@@ -40,36 +25,17 @@ const Exercises: React.FC = () => {
   }, [])
 
   return (
-    <Center as="section" w="100%" flexDirection="column" p={8}>
-      <Heading as="h4" fontSize="xl">
+    <Center as="article" w="100%" flexDirection="column" p={8}>
+      <Heading as="h4" fontSize="xl" alignSelf="flex-start" p={4}>
         List of Exercises
       </Heading>
-      <Wrap spacing="30px" py={4}>
-        {exercises.length !== 0 ? (
+      <Wrap as="section" spacing="30px" py={4} justify="center">
+        {exercises && exercises.length !== 0 ? (
           exercises.map((exercise: Exercise) => {
-            return (
-              <WrapItem
-                key={exercise._id}
-                borderWidth="1px"
-                borderRadius="5px"
-                borderColor="purple.500"
-                bgColor="purple.50"
-                flexDirection="column"
-                w="100%"
-                maxW="400px"
-                maxH="300px"
-                minH="100%"
-                p={6}
-              >
-                <Heading as="h5" fontSize="md">
-                  {exercise.title}
-                </Heading>
-                <Text>{exercise.description}</Text>
-              </WrapItem>
-            )
+            return <ExerciseCard key={exercise._id} exercise={exercise} />
           })
         ) : (
-          <Spinner fontSize="72px" color="purple.500" />
+          <Spinner size="xl" />
         )}
       </Wrap>
     </Center>

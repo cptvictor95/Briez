@@ -20,6 +20,7 @@ const Create: React.FC = () => {
   const router = useRouter()
 
   const onSubmit = (data) => {
+    console.info('form data', data)
     handleCreateExercise(data)
     router.push('/')
   }
@@ -28,6 +29,7 @@ const Create: React.FC = () => {
     try {
       const exercise: IExercise = data
       const response = await axios.post(`${baseUrl}/exercises`, exercise)
+      console.info('axios data', response)
       toast({
         title: 'Exercise registered!',
         status: 'success',

@@ -6,9 +6,7 @@ import Exercises from './exercises/index'
 const Home: React.FC = () => {
   return (
     <Main title="Home">
-      <Flex h="100vh" w="100%" direction="column">
-        <Heading as="h1">Hello! Welcome to BRAV</Heading>
-
+      <Flex as="article" h="100vh" w="100%" direction="column">
         <Exercises />
       </Flex>
     </Main>
