@@ -18,6 +18,7 @@ Path: `/api`
 
 ##### Exercises
 Path: `/api/exercises`
+
 Method: `GET`
 
 ##### Create Exercise
