@@ -25,5 +25,9 @@ Path: `/api/exercises`
 Method: `POST`
 
 ##### Get Exercise By Id
-Path: `/api/exercises/:id`
+Path: `/api/exercise/:id`
 Method: `GET`
+
+##### Update Exercise
+Path: `/api/exercise/:id`
+Method: `PUT`
