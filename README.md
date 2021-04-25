@@ -22,12 +22,15 @@ Method: `GET`
 
 ##### Create Exercise
 Path: `/api/exercises`
+
 Method: `POST`
 
 ##### Get Exercise By Id
 Path: `/api/exercise/:id`
+
 Method: `GET`
 
 ##### Update Exercise
 Path: `/api/exercise/:id`
+
 Method: `PUT`
