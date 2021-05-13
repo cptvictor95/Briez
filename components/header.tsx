@@ -1,6 +1,6 @@
-import React from 'react'
-import Button from './Button'
-import { Flex, Heading } from '@chakra-ui/layout'
+import React from 'react';
+import Button from './Button';
+import { Flex, Heading } from '@chakra-ui/layout';
 
 const Header = () => {
   return (
@@ -19,10 +19,11 @@ const Header = () => {
       </Heading>
       <Flex as="nav">
         <Button toRoute={'/'}>Home</Button>
+        <Button toRoute={'/exercises'}>Catalog</Button>
         <Button toRoute={'/exercises/create'}>Create</Button>
       </Flex>
     </Flex>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
