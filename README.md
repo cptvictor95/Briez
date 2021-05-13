@@ -12,26 +12,29 @@
 - ##### Mongoose
 - ##### Typescript
 
-## API Routes
-##### Root
-Path: `/api`
+## Paths
+Root
+##### Path: `/api`
 
-##### Exercises
-Path: `/api/exercises`
+Get Exercises
+#### Implementation Notes
+##### Fetches a list of exercises.
+##### Method: `GET`
 
-Method: `GET`
+##### Path: `/api/exercises`
 
-##### Create Exercise
-Path: `/api/exercises`
+Create Exercise
+##### Creates an exercise.
+##### Method: `POST`
 
-Method: `POST`
+##### Path: `/api/exercises`
 
-##### Get Exercise By Id
-Path: `/api/exercise/:id`
+Get Exercise By Id
+##### Method: `GET`
 
-Method: `GET`
+##### Path: `/api/exercise/:id`
 
-##### Update Exercise
-Path: `/api/exercise/:id`
+Update Exercise
+##### Method: `PUT`
 
-Method: `PUT`
+##### Path: `/api/exercise/:id`
