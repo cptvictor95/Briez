@@ -2,7 +2,7 @@ import { Wrap, Spinner } from '@chakra-ui/react';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 import { Exercise } from '../../interface/Exercise';
-import ExerciseCard from '../ExerciseCard';
+import ExerciseCard from './ExerciseCard';
 
 const ExerciseList = () => {
   const [exercises, setExercises] = useState<Exercise[]>([]);

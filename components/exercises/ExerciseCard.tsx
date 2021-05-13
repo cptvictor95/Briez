@@ -1,6 +1,6 @@
-import { Heading, Text, WrapItem } from '@chakra-ui/layout'
-import React from 'react'
-import { Exercise } from '../interface/Exercise'
+import { Heading, Text, WrapItem } from '@chakra-ui/layout';
+import React from 'react';
+import { Exercise } from '../../interface/Exercise';
 
 const ExerciseCard: React.FC<{ exercise: Exercise }> = ({ exercise }) => {
   return (
@@ -22,7 +22,7 @@ const ExerciseCard: React.FC<{ exercise: Exercise }> = ({ exercise }) => {
       </Heading>
       <Text>{exercise.description}</Text>
     </WrapItem>
-  )
-}
+  );
+};
 
-export default ExerciseCard
+export default ExerciseCard;
