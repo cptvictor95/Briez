@@ -29,12 +29,14 @@ Create Exercise
 
 ##### Path: `/api/exercises`
 
-Get Exercise By Id
+Get Exercise By ID
+##### Fetches an exercise using the ID.
 ##### Method: `GET`
 
 ##### Path: `/api/exercise/:id`
 
 Update Exercise
+##### Updates an exercise using the ID
 ##### Method: `PUT`
 
 ##### Path: `/api/exercise/:id`
