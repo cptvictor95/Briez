@@ -1,11 +1,13 @@
 import { Wrap, Spinner } from '@chakra-ui/react';
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
+import { ExerciseCtx } from '../../context/exerciseContext';
 import { Exercise } from '../../interface/Exercise';
 import ExerciseCard from './ExerciseCard';
 
 const ExerciseList = () => {
   const [exercises, setExercises] = useState<Exercise[]>([]);
+  const { state } = useContext(ExerciseCtx);
   const baseUrl = process.env.NEXT_PUBLIC_API_BASE_URL;
 
   const getExercises = async () => {

@@ -9,8 +9,6 @@ const updateExercise = async (
     const id = req.params.id as string;
     const { title, description, musclesUsed, category } = req.body;
 
-    console.log(id);
-
     const exercise = await Exercise.findByIdAndUpdate(
       { _id: id },
       {
