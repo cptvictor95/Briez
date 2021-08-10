@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "muscle_groups",
+  "info": {
+    "name": "Muscle Group",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "enumeration",
+      "enum": [
+        "Chest",
+        "Legs",
+        "Shoulders",
+        "Arms",
+        "Core",
+        "Back"
+      ]
+    },
+    "exercise": {
+      "via": "muscle_groups",
+      "model": "exercise"
+    }
+  }
+}

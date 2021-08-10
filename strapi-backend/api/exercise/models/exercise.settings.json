@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "exercises",
+  "info": {
+    "name": "Exercise",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "muscle_groups": {
+      "collection": "muscle-group",
+      "via": "exercise"
+    },
+    "description": {
+      "type": "text"
+    },
+    "categories": {
+      "via": "exercises",
+      "collection": "category"
+    }
+  }
+}

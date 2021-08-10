@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/muscle-groups",
+      "handler": "muscle-group.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/muscle-groups/count",
+      "handler": "muscle-group.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/muscle-groups/:id",
+      "handler": "muscle-group.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/muscle-groups",
+      "handler": "muscle-group.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/muscle-groups/:id",
+      "handler": "muscle-group.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/muscle-groups/:id",
+      "handler": "muscle-group.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
