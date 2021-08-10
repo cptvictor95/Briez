@@ -1,14 +1,14 @@
 export interface Exercise {
-  _id: string;
-  title: string;
+  id: string;
+  name: string;
   description: string;
-  musclesUsed: string[];
-  category: string;
+  muscleGroups: [];
+  categories: [];
 }
 
 export interface ExerciseDTO {
-  title: string;
+  name: string;
   description: string;
-  musclesUsed: string[];
-  category: string;
+  muscleGroups: [];
+  categories: [];
 }

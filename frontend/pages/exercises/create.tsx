@@ -8,9 +8,9 @@ import Main from '../../layouts/Main';
  * @TODO [X] Add ExerciseDTO to exercise interface
  * @TODO [X] Add FormErrorMessage to all fields
  * @TODO [X] Add axios createExercise function to Exercise Actions Context
- * @TODO [] Create Custom Input
- * @TODO [] Change Category Input to Select
- * @TODO [] Change Muscles Groups Used Input to Select
+ * @TODO [X] Create Custom Input
+ * @TODO [] Change Category Input into Select
+ * @TODO [] Change Muscles Groups Used Input into Checkbox
  */
 
 const Create: React.FC = () => {

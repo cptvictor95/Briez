@@ -2,10 +2,12 @@ import {
   Flex,
   Heading,
   FormControl,
-  Input,
-  FormErrorMessage,
   Button,
   useToast,
+  Select,
+  FormLabel,
+  Checkbox,
+  CheckboxGroup,
 } from '@chakra-ui/react';
 import { useRouter } from 'next/dist/client/router';
 import React, { useContext } from 'react';
@@ -71,20 +73,28 @@ const ExerciseForm = () => {
         register={register}
         required
       />
-      <FormInput
-        error={errors.musclesUsed}
-        id="musclesUsed"
-        label="Muscles targeted"
-        register={register}
-        required
-      />
-      <FormInput
-        error={errors.category}
-        id="category"
-        label="Category"
-        register={register}
-        required
-      />
+      <FormControl isInvalid={errors.muscleGroups}>
+        <FormLabel htmlFor="muscleGroups">Muscles Groups Targeted</FormLabel>
+        <CheckboxGroup {...register('muscleGroups', { required: true })}>
+          <Checkbox value="Shoulders">Shoulders</Checkbox>
+          <Checkbox value="Chest">Chest</Checkbox>
+          <Checkbox value="Back">Back</Checkbox>
+          <Checkbox value="Abs">Abs</Checkbox>
+          <Checkbox value="Legs">Legs</Checkbox>
+          <Checkbox value="Arms">Arms</Checkbox>
+        </CheckboxGroup>
+      </FormControl>
+      <FormControl isInvalid={errors.category}>
+        <FormLabel htmlFor="category">Category</FormLabel>
+        <Select
+          id="category"
+          placeholder="Choose a category"
+          {...register('category', { required: true })}
+        >
+          <option value="Calisthenics">Calisthenics</option>
+          <option value="Yoga">Yoga</option>
+        </Select>
+      </FormControl>
       <Button
         type="submit"
         isLoading={isSubmitting}
